@@ -1,51 +1,55 @@
-* {
-  margin: 0;
-  padding: 0;
-  color: white;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-nav {
+.navi {
   background-color: #1b1b1b;
 }
 
-nav:after {
+.navi:after {
   content: "";
   clear: both;
   display: table;
 }
-nav .logo {
+.navi .logo {
   float: left;
   color: white;
   font-size: 28px;
   font-weight: 600;
   line-height: 70px;
 }
-nav ul {
-  float: right;
+.navi ul {
+  float: left;
   list-style: none;
   margin-right: 40px;
   position: relative;
 }
-nav ul li {
+.navi ul li {
   float: left;
   display: inline-block;
   background: #1b1b1b;
   margin: 0 5px;
 }
-nav ul li a {
+.navi ul li a {
   color: white;
   text-decoration: none;
   line-height: 70px;
   font-size: 18px;
   padding: 8px 15px;
 }
-nav ul ul {
-  position: absolute;
-  top: 70px;
-  display: none;
+.navi ul li a:hover {
+  color: cyan;
+  box-shadow: 0 0 5px #33ffff, 0 0 5px #66ffff;
 }
-nav ul ul li {
+.navi ul ul {
+  position: absolute;
+  top: 90px;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 0.3s;
+}
+.navi ul li:hover > ul {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+.navi ul ul li {
   position: relative;
   margin: 0px;
   width: 150px;
@@ -53,7 +57,16 @@ nav ul ul li {
   display: list-item;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
-nav ul ul ul li {
+.navi ul ul li a {
+  line-height: 50px;
+  margin-left: 10px;
+}
+.navi ul ul li a:hover {
+  color: cyan;
+  box-shadow: none;
+}
+.navi ul ul ul li {
   position: relative;
   top: -70px;
+  margin-left: 100px;
 }

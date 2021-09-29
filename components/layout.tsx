@@ -5,7 +5,7 @@ import styles from "./layout.module.css";
 
 const Layout: NextPage = () => {
   return (
-    <nav>
+    <nav className={styles.navi}>
       <div>Health Jandi</div>
       <ul>
         <li>
@@ -16,6 +16,17 @@ const Layout: NextPage = () => {
           <ul>
             <li>
               <a href="#">Home</a>
+              <ul>
+                <li>
+                  <a href="#">Submenu</a>
+                </li>
+                <li>
+                  <a href="#">Submenu</a>
+                </li>
+                <li>
+                  <a href="#">Submenu</a>
+                </li>
+              </ul>
             </li>
             <li>
               <a href="#">Home</a>
